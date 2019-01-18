@@ -46,13 +46,13 @@ fun doStuff(view: View) {
 #### Accessing attributes programatically
 All custom attributes can be set like below:
 ```
-loadingButton.setButtonOnClickListener(View.OnClick...)
+loadingButton.setButtonOnClickListener(View.OnClickListener)
 
 loadingButton.setButtonColor(Int)
 
 loadingButton.setTextColor(Int)
 
-loadingButton.setButtonText(text: String)
+loadingButton.setButtonText(String)
 ```
 
 ## License
