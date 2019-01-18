@@ -1,12 +1,14 @@
 # MaterialLoadingButton
 
-A **configurable** and **animated** material loading button.
+A **configurable** and **animated** material loading button. If you're an RxJava fan as I am this button will come you really handy.
 
 ![](showcase.gif)
 
 ## Usage
 
 Minimum SDK: 21 
+
+Currently this widget is running with androidX and also allows the usage of databinding to set the elements comfortably.
 
 ### Gradle
 ```
@@ -18,18 +20,40 @@ allprojects {
 ```
 ```
 dependencies {
-	implementation 'com.github.Muki1992:MaterialLoadingButton:Tag'
+	implementation 'com.github.Muki1992:MaterialLoadingButton:1.0'
  }
+```
+### Indicating the loading progress
+```
+fun doStuff(view: View) {
+    loadingButton.onStartLoading()
+    Handler().postDelayed({
+    loadingButton.onStopLoading()
+    }, 500)
+}
 ```
 ### XML
 ```xml
-        <de.mustafagercek.library.LoadingButton
-                android:id="@+id/loading_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:buttonText="Do stuff"
-                app:onButtonClick="@{(view)->presenter.doStuff(view)}"
-                bind:buttonColor="@{@color/colorPrimary}"/>
+<de.mustafagercek.library.LoadingButton
+     android:id="@+id/loading_button"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     app:buttonText="Do stuff"
+     app:onButtonClick="@{(view)->presenter.doStuff(view)}"
+     bind:buttonColor="@{@color/colorPrimary}"/>
+```
+
+#### Accessing attributes programatically
+All custom attributes can be set like below:
+```
+loadingButton.setButtonOnClickListener(View.OnClick...)
+
+loadingButton.setButtonColor(Int)
+
+loadingButton.setTextColor(Int)
+
+loadingButton.setButtonText(text: String)
+```
 
 ## License
 
