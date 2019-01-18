@@ -2,6 +2,8 @@
 
 A **configurable** and **animated** material loading button.
 
+![](showcase.gif)
+
 ## Usage
 
 Minimum SDK: 21 
