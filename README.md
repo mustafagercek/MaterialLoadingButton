@@ -6,6 +6,29 @@ A **configurable** and **animated** material loading button.
 
 Minimum SDK: 21 
 
+### Gradle
+```
+allprojects {
+  repositories {
+    maven { url 'https://jitpack.io' }
+  }
+}
+```
+```
+dependencies {
+	implementation 'com.github.Muki1992:MaterialLoadingButton:Tag'
+ }
+```
+### XML
+```xml
+        <de.mustafagercek.library.LoadingButton
+                android:id="@+id/loading_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:buttonText="Do stuff"
+                app:onButtonClick="@{(view)->presenter.doStuff(view)}"
+                bind:buttonColor="@{@color/colorPrimary}"/>
+
 ## License
 
 
