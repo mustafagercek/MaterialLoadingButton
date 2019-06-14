@@ -5,9 +5,6 @@ apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 28
-
-
-
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 28
@@ -35,14 +32,16 @@ android {
         correctErrorTypes = true
     }
 
+    packagingOptions {
+        exclude 'META-INF/library_release.kotlin_module'
+    }
+
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-
+    implementation 'androidx.appcompat:appcompat:1.0.2'
 }
 repositories {
     mavenCentral()
