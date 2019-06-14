@@ -13,7 +13,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-        <de.mustafagercek.library.LoadingButton
+        <de.mustafagercek.materialloadingbutton.LoadingButton
                 android:id="@+id/loading_button"
                 android:layout_width="match_parent"
                 app:buttonText="Do stuff"
@@ -21,7 +21,7 @@
                 bind:buttonColor="@{@color/colorPrimary}"
                 android:layout_height="wrap_content"/>
 
-        <de.mustafagercek.library.LoadingButton
+        <de.mustafagercek.materialloadingbutton.LoadingButton
                 android:id="@+id/loading_button2"
                 android:layout_width="match_parent"
                 app:buttonText="Do stuff"
@@ -29,7 +29,7 @@
                 app:buttonColor="?colorAccent"
                 android:layout_height="wrap_content"/>
 
-        <de.mustafagercek.library.LoadingButton
+        <de.mustafagercek.materialloadingbutton.LoadingButton
                 android:id="@+id/loading_button3"
                 android:layout_width="match_parent"
                 app:onButtonClick="@{(view)->presenter.doStuff3(view)}"

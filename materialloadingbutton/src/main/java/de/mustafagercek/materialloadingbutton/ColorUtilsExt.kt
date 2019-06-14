@@ -1,9 +1,6 @@
-package de.mustafagercek.library
+package de.mustafagercek.materialloadingbutton
 
-import android.content.Context
 import android.graphics.Color
-import android.util.TypedValue
-import androidx.annotation.ColorInt
 
 
 fun isColorDark(color: Int): Boolean {

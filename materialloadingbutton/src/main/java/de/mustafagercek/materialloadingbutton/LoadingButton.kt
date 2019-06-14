@@ -1,4 +1,4 @@
-package de.mustafagercek.library
+package de.mustafagercek.materialloadingbutton
 
 import android.content.Context
 import android.content.res.ColorStateList
@@ -12,7 +12,6 @@ import android.widget.Button
 import android.widget.ProgressBar
 import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
-
 
 class LoadingButton @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
