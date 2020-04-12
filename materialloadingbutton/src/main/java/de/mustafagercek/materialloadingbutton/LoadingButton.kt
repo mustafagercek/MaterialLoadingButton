@@ -12,12 +12,13 @@ import android.widget.Button
 import android.widget.ProgressBar
 import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
+import com.google.android.material.button.MaterialButton
 
 class LoadingButton @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : FrameLayout(context, attrs, defStyleAttr) {
 
-    private var button: Button
+    private var button: MaterialButton
     private var progressBar: ProgressBar
     private var text: String? = null
     private var buttonColor: Int = 0
@@ -66,18 +67,25 @@ class LoadingButton @JvmOverloads constructor(
     }
 
     private fun drawButton() {
-        colorStateList = ColorStateList(
-            arrayOf(
-                intArrayOf(android.R.attr.state_enabled),
-                intArrayOf(-android.R.attr.state_enabled)
-            ),
-            intArrayOf(
-                if (buttonColor == 0) fetchAccentColor() else buttonColor,
-                ContextCompat.getColor(context, R.color.disabledButtonBackground)
-            )
-        )
+//        colorStateList = ColorStateList(
+//            arrayOf(
+//                intArrayOf(android.R.attr.state_enabled),
+//                intArrayOf(-android.R.attr.state_enabled)
+//            ),
+//            intArrayOf(
+//                if (buttonColor == 0) fetchAccentColor() else buttonColor,
+//                ContextCompat.getColor(context, R.color.disabledButtonBackground)
+//            )
+//        )
 
-        button.backgroundTintList = colorStateList
+        if(button.isEnabled){
+            button.setBackgroundColor(buttonColor)
+        }else{
+            button.setBackgroundColor(ContextCompat.getColor(context,R.color.disabledButtonBackground))
+        }
+
+
+//        button.backgroundTintList = colorStateList
         button.text = text
 
 

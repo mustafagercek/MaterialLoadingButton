@@ -23,9 +23,10 @@ class MainActivity : AppCompatActivity() {
 
 
     fun doStuff(view: View) {
-        binding.loadingButton.onStartLoading()
+        binding.loadingButton.setButtonEnabled(false)
         Handler().postDelayed({
-            binding.loadingButton.onStopLoading()
+            binding.loadingButton.setButtonEnabled(true)
+            binding.loadingButton2.setButtonEnabled(true)
         }, 500)
     }
 
