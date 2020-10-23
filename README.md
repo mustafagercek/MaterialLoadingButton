@@ -20,7 +20,7 @@ allprojects {
 ```
 ```
 dependencies {
-	implementation 'com.github.Muki1992:MaterialLoadingButton:1.0'
+	implementation 'com.github.Muki1992:MaterialLoadingButton:2.0'
  }
 ```
 ### Indicating the loading progress
