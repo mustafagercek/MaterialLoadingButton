@@ -1,12 +1,14 @@
 package de.mustafagercek.materialloadingbutton
 
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.Typeface
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.res.ResourcesCompat
 import androidx.databinding.DataBindingUtil
 import de.mustafagercek.materialloadingbutton.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,6 +20,12 @@ class MainActivity : AppCompatActivity() {
         binding.presenter = this
 
         binding.loadingButton2.setButtonEnabled(false)
+        val normal =
+            ResourcesCompat.getFont(this, R.font.extra_bold);
+        val normal2 =
+            ResourcesCompat.getFont(this, R.font.comici);
+        binding.loadingButton2.setFont(normal!!)
+        binding.loadingButton.setFont(normal2!!)
 
     }
 

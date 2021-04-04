@@ -3,6 +3,7 @@ package de.mustafagercek.materialloadingbutton
 import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.Color
+import android.graphics.Typeface
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.widget.FrameLayout
@@ -108,6 +109,11 @@ class LoadingButton @JvmOverloads constructor(
 
     fun setButtonColor(color: Int) {
         buttonColor = color
+        drawButton()
+    }
+
+    fun setFont(typeface: Typeface){
+        button.setTypeface(typeface)
         drawButton()
     }
 
